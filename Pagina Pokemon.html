@@ -1,0 +1,78 @@
+<html>
+
+<head>
+ <script type="text/javascript">
+
+function Pokemon(){
+
+	var Turno=1;
+
+var Pikachu= {
+
+	Vida:100,
+
+	Ataque: 55,
+
+	win: function () {
+		alert("Pikachu ha ganado");
+	}
+}
+
+var jiglypuff = {
+
+	Vida: 100,
+
+	Ataque: 45,
+
+	win : function() {
+		alert("jiglypuff ha ganado");
+	}
+}
+
+while (Pikachu.Vida > 0 && jiglypuff.Vida > 0){
+	if (Turno==1)
+	{
+		jiglypuff.Vida=jiglypuff.Vida - Pikachu.Ataque;
+
+		Turno=2;
+
+		alert("jiglypuff Ahora tiene  " +jiglypuff.Vida+ "Puntos de Vida");
+	}
+	else {
+		Pikachu.Vida=Pikachu.Vida - jiglypuff.Ataque;
+
+		Turno=1;+
+
+		alert("Pikachu Ahora tiene  " +Pikachu.Vida+  "Puntos de Vida");
+
+	}
+	
+	
+	}
+    if (Pikachu.Vida >= 0 ) {
+    	Pikachu.win();
+    }
+    else{
+
+    	jiglypuff.win();
+    }
+
+
+
+}
+
+
+ </script>
+
+
+</head>
+
+
+<body>
+	
+	<button type="button" onclick="Pokemon();"> Empieza la batalla!
+		
+	</button>
+</body>
+
+</html>
